@@ -63,8 +63,13 @@ const BoardRegister = () => {
     const formData = new FormData();
     formData.append('title', board.title);
     formData.append('content', board.content);
-    formData.append('uploadFile', board.uploadFile);
 
+    // 사용자가 입력한 파일이 없다면
+    // 폼데이터에서 빼기!
+    if(board.uploadFile !== undefined) {
+      formData.append('uploadFile', board.uploadFile);
+    }
+    
     // 게시물 등록 API 호출
     // 등록은 post
     // 인자: 주소, 헤더 + 파라미터
