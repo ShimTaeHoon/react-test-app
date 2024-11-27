@@ -44,6 +44,7 @@ if(info !== null){
 // 로컬 컴퓨터에서 React App을 실행할 때는
 // API 주소도 localhost로 설정
 // 그렇지 않으면 (Netlify에서) AWS 서버로 설정
+// API 주소
 let host;
 if(window.location.hostname === 'localhost'){
   host = 'http://localhost:8080';
